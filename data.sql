@@ -11,14 +11,3 @@ INSERT INTO animals VALUES (8,'Angemon', '2005-JUN-12', 1, TRUE, -45);
 INSERT INTO animals VALUES (9,'Boarmon', '2005-JUN-07', 7, TRUE, 20.4);
 INSERT INTO animals VALUES (10,'Blossom', '1998-OCT-13', 3, TRUE, 17);
 INSERT INTO animals VALUES (11,'Ditto', '2022-MAY-14', 4, TRUE, 22);
-
-BEGIN;
-UPDATE animals
-SET species = 'Digimon'
-WHERE name LIKE '%mon';
-
-UPDATE animals
-SET species = 'Pokemon'
-WHERE name NOT LIKE '%mon';
-
-COMMIT;
