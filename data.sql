@@ -11,3 +11,31 @@ INSERT INTO animals VALUES (8,'Angemon', '2005-JUN-12', 1, TRUE, -45);
 INSERT INTO animals VALUES (9,'Boarmon', '2005-JUN-07', 7, TRUE, 20.4);
 INSERT INTO animals VALUES (10,'Blossom', '1998-OCT-13', 3, TRUE, 17);
 INSERT INTO animals VALUES (11,'Ditto', '2022-MAY-14', 4, TRUE, 22);
+
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
+INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
+INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
+INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77);
+INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
+INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
+
+INSERT INTO speecies (name) VALUES ('Pokemon')
+INSERT INTO speecies (name) VALUES ('Digimon')  
+
+UPDATE animals 
+SET owners_id = 1
+WHERE name = 'Agumon'
+
+UPDATE animals 
+SET owners_id = 2
+WHERE name IN ('Gabumon', 'Pikachu')
+
+UPDATE animals 
+SET owners_id = 3
+WHERE name IN ('Charmander', 'Squirtle', 'Blossom')
+
+UPDATE animals 
+SET owners_id = 4
+WHERE name IN ('Angemon', 'Boarmon')
+
+test commit

@@ -34,3 +34,18 @@ SELECT AVG(weight_kg) AS weight_average FROM animals;
 SELECT neutered, SUM(escapte_attempts) AS most_escapte_attempts FROM animals GROUP BY neutered;
 SELECT species, MIN(weight_kg) AS min_wight, MAX(weight_kg) AS max_weight FROM animals GROUP BY species;
 SELECT species, AVG(escapte_attempts) AS average_attempts FROM animals WHERE TO_CHAR(date_of_birth, 'yyyy') BETWEEN '2016' and '2019' GROUP BY species;
+
+SELECT name FROM animals JOIN owners ON animals.owners_id=owners.id WHERE owners.full_name='Bob';
+SELECT (animals.name) FROM animals  JOIN species ON animals.species_id=species.id WHERE (animals.name) NOT LIKE '%mon';
+SELECT * FROM owners LEFT JOIN animals ON owners.id=animals.owners_id;
+SELECT COUNT(animals.species_id),  species.name FROM animals JOIN species on animals.species_id = species.id GROUP BY species.name, animals.species_id;
+select name FROM animals WHERE owners_id = 2 AND name LIKE '%mon';
+SELECT * FROM animals  JOIN owners  ON animals.owners_id=owners.id WHERE owners.full_name='Dean Winchester'
+AND animals.escapte_attempts = 0;
+SELECT COUNT(*) AS owners_count, owners.full_name FROM animals  JOIN owners  ON owners.id=animals.owners_id GROUP BY owners.full_name ORDER BY owners_count DESC LIMIT 1;;
+
+test commit
+
+
+
+
