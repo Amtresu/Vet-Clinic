@@ -37,5 +37,3 @@ WHERE name IN ('Charmander', 'Squirtle', 'Blossom')
 UPDATE animals 
 SET owners_id = 4
 WHERE name IN ('Angemon', 'Boarmon')
-
-test commit

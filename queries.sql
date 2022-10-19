@@ -44,8 +44,6 @@ SELECT * FROM animals  JOIN owners  ON animals.owners_id=owners.id WHERE owners.
 AND animals.escapte_attempts = 0;
 SELECT COUNT(*) AS owners_count, owners.full_name FROM animals  JOIN owners  ON owners.id=animals.owners_id GROUP BY owners.full_name ORDER BY owners_count DESC LIMIT 1;;
 
-test commit
-
 
 
 

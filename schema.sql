@@ -46,5 +46,3 @@ CREATE TABLE vets (
 	age INT,
 	date_of_graduation date
 );
-
-test commit
