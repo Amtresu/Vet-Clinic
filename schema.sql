@@ -46,3 +46,15 @@ CREATE TABLE vets (
 	age INT,
 	date_of_graduation date
 );
+
+CREATE TABLE specializations(
+    species_id int REFERENCES species(id),
+    vets_id int REFERENCES vets(id),
+    PRIMARY KEY (species_id, vets_id)
+);
+
+CREATE TABLE visits(
+    animals_id int REFERENCES animals(id),
+    vets_id int REFERENCES vets(id),
+    date_of_visit date
+);
